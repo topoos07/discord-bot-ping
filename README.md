@@ -27,6 +27,26 @@ This Discord bot is your ultimate pinging companion! It tirelessly sends out not
    ```
    Make sure to replace the placeholders with actual values from your Discord server and bot.
 
+**To find your Guild ID:
+	•	Open Discord in your browser or desktop app.
+	•	Right-click on your server’s icon in the sidebar.
+	•	Select “Copy ID” from the menu.
+	•	Paste this ID as the value for "spam_guild_id".
+**To find your Role ID:
+	•	Open Discord in your browser or desktop app.
+	•	Go to Server Settings > Roles.
+	•	Right-click on the role you want to use and select “Copy ID”.
+	•	Paste this ID as the value for "ping_role_id".
+**To obtain your Bot Token:
+	•	Go to the Discord Developer Portal (https://discord.com/developers/applications).
+	•	Create a new application and navigate to the “Bot” tab.
+	•	Click “Add Bot” and confirm.
+	•	Under the bot’s username, click “Copy” to copy the token.
+	•	Paste this token as the value for "bot_token".
+Note: Keep your bot token secure and never share it publicly.
+Make sure to replace the placeholders with the actual values from your Discord server and bot.
+
+
 ## Usage
 1. **Run the Bot:** Fire up the bot using the command:
    ```bash
