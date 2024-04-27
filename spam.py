@@ -4,43 +4,31 @@ import asyncio
 import json
 import os
 
-
-
-filename = "config.json"
-if os.path.isfile(filename):
-    print(f"{filename} exists.")
-else:
-    print(f"{filename} does not exist.")
-
-
-pingr = commands.Bot(command_prefix="!", help_command=None)
-
-
-
+# Load configuration from config.json
 with open("config.json") as f:
-    geb = json.load(f)
-    guildid  =  int(geb["spam_guild_id"])
-    roleid   =  int(geb["ping_role_id"])
-    bottoken =  geb["bot_token"]
+    config = json.load(f)
+    guild_id = int(config["spam_guild_id"])
+    role_id = int(config["ping_role_id"])
+    bot_token = config["bot_token"]
 
-async def ping_task():
+# Initialize the bot
+bot = commands.Bot(command_prefix="!", help_command=None)
+
+# Define the ping task
+async def ping_task(channel_id):
     while True:
-        guild = pingr.get_guild(guildid)
-        for channel in guild.channels:
-            if isinstance(channel, discord.TextChannel):
-                if channel.name.startswith('general'): #specify channel name
-                    await channel.send(f"@everyone HI :)!!! AHAHHAHAHAHHa")
-                    await asyncio.sleep(0.01)
-                else:
-                    pass
-                  
-@pingr.event
+        guild = bot.get_guild(guild_id)
+        channel = guild.get_channel(channel_id)
+        if channel:
+            await channel.send(f"@everyone AHHAHAH DUMP!")
+        await asyncio.sleep(0.01)  # Adjust the interval as needed
+
+# Event handler for bot ready
+@bot.event
 async def on_ready():
-    pingr.loop.create_task(ping_task())
+    print(f"Bot is ready. Guild ID: {guild_id}")
+    channel_id = int(input("Enter the channel ID where you want to ping everyone: "))
+    bot.loop.create_task(ping_task(channel_id))
 
-@pingr.slash_command(guild_ids=[guildid])
-async def ping(ctx):
-    await ctx.respond(f"{round(pingr.latency * 10)}ms")
-
-
-pingr.run(bottoken)
+# Run the bot
+bot.run(bot_token)
