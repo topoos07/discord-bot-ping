@@ -27,8 +27,10 @@ This Discord bot performs automated pinging in specified channels. The bot sends
 2. Install the required dependencies using the following command:
    ```
    pip install -r requirements.txt
+
    ```
 3. Create a `config.json` file with the following structure:
+
    ```json
    {
        "spam_guild_id": "your_guild_id",
