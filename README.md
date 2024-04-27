@@ -26,7 +26,7 @@ This Discord bot performs automated pinging in specified channels. The bot sends
    pip install -r requirements.txt
 3. Create a `config.json` file with the following structure:
 
-   ```json
+   
    {
        "spam_guild_id": "your_guild_id",
        "ping_role_id": "your_role_id",
@@ -41,7 +41,7 @@ This Discord bot performs automated pinging in specified channels. The bot sends
    python bot.py
    ```
 2. Invite the bot to your Discord server.
-3. Use the `!ping` command to trigger the pinging process.
+3. Use the `!ping` command to trigger the pinging process. !You don't need it.
 
 ## Contributing
 Contributions are welcome! Please fork this repository and create a pull request.
