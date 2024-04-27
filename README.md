@@ -2,7 +2,7 @@
 
 ```markdown
 # 🤖 Automated Pinging Bot
-
+```
 ## Description
 This Discord bot is your ultimate pinging companion! It tirelessly sends out notifications to specified channels, mentioning everyone (@everyone) at regular intervals. With its customizable features, you can fine-tune the target channel and adjust the ping frequency to suit your needs.
 
@@ -40,5 +40,4 @@ This Discord bot is your ultimate pinging companion! It tirelessly sends out not
 
 Feel the urge to modify and enhance this README even further? Go ahead, let your creativity flow! Best of luck with your Discord bot adventures! 🚀
 ```
-
-This version adds some emojis, headings, and a bit more excitement to the text. Feel free to adjust it further to match your style!
+~topoos
