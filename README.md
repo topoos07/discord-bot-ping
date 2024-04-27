@@ -1,4 +1,4 @@
-Sure, let's add some flair to it:
+
 
 ```markdown
 # 🤖 Automated Pinging Bot
@@ -14,7 +14,7 @@ This Discord bot is your ultimate pinging companion! It tirelessly sends out not
 ## Installation
 1. **Clone this Repository:** Bring the bot to life by cloning this repository to your local machine.
 2. **Install Dependencies:** Use the following command to install the required dependencies:
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 3. **Configure Settings:** Create a `config.json` file with the following structure:
